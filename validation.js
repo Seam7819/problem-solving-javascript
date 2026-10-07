@@ -3,6 +3,8 @@ function detail(info) {
         return 'Invalid information provided.';
     }}else if(typeof info.name !== 'string' || typeof info.age !== 'number'){
         return 'Invalid information provided.';
+    }else if(info.name.trim() === '' || info.age < 0){  
+        return 'Invalid information provided.';
     }
     return 'my name is ' + info.name + ' and I am ' + info.age + ' years old.' ;
 }
